@@ -42,7 +42,7 @@ jobs:
     #Install Maven and run tests
     - name: Build and Test with Maven
       run: mvn clean install
-      working-directory: D:/Recovery/Weblogic_Notes/SpBoot/apiTesting
+      working-directory: /d/Recovery/Weblogic_Notes/SpBoot/apiTesting
 
     #Generate code coverage report using JaCoCo
     - name: Code Coverage Report
