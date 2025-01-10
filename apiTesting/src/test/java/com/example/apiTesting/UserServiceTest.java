@@ -1,14 +1,15 @@
 package com.example.apiTesting;
 
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import javax.swing.text.html.Option;
 
 import java.util.Optional;
 
-import static junit.framework.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class UserServiceTest {
@@ -16,7 +17,7 @@ public class UserServiceTest {
 	private ApiClient apiClientMock;
 	private UserService userService;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		apiClientMock = Mockito.mock(ApiClient.class);
 		userService = new UserService(apiClientMock);

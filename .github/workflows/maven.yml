@@ -51,9 +51,3 @@ jobs:
       working-directory: apiTesting
       run: mvn test
 
-    #Upload test results and coverage reports
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-results
-        path: target/surefire-reports/
