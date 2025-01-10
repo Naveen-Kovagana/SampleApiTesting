@@ -39,10 +39,16 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven
 
+    - name: Navigate to apiTesting and Verify
+      run: |
+       cd apiTesting
+       ls -al
+      shell: bash
+      
     #Install Maven and run tests
     - name: Build and Test with Maven
-      run: mvn clean install
-      working-directory: ./Recovery/Weblogic_Notes/SpBoot/apiTesting
+      run: mvn test
+      working-directory: apiTesting
 
     #Generate code coverage report using JaCoCo
     - name: Code Coverage Report
